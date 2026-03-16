@@ -1,14 +1,12 @@
 # Active-Directory
 
-# Active Directory
-
 **Complete Security Engineer Reference**
 
 *Setup → Architecture → DNS → LDAP → Kerberos → NTDS.dit → OUs → GPO → Replication → SYSVOL*
 
 ---
 
-## 0. What Active Directory Is
+## What Active Directory Is
 
 Active Directory Domain Services (AD DS) is Microsoft's on-prem identity platform. It is simultaneously many things:
 
