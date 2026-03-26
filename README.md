@@ -447,6 +447,8 @@ Created by LSASS at logon. Contains:
 
 ```
 ntdsutil "activate instance ntds" "ifm" create full C:\IFM
+```
+```
 ntdsutil "activate instance ntds" "ifm" create full C:\Dump
 ```
 
@@ -476,6 +478,8 @@ ntdsutil "activate instance ntds" "ifm" create full C:\Dump
 
 ```
 whoami /fqdn
+```
+```
 whoami /groups
 ```
 
@@ -483,7 +487,11 @@ whoami /groups
 
 ```
 net user /domain
+```
+```
 net user <username> /domain
+```
+```
 net group /domain
 ```
 
@@ -491,7 +499,11 @@ net group /domain
 
 ```
 nltest /dsgetdc:<domain>
+```
+```
 nltest /dclist:<domain>
+```
+```
 nltest /sc_verify:<domain>
 ```
 
@@ -505,7 +517,11 @@ klist
 
 ```
 repadmin /replsummary
+```
+```
 repadmin /showrepl
+```
+```
 dcdiag /v
 ```
 
@@ -513,7 +529,11 @@ dcdiag /v
 
 ```
 dsquery user -name John*
+```
+```
 dsquery computer -o rdn
+```
+```
 dsget user "CN=John Doe,OU=IT,DC=leokadia,DC=net" -memberof
 ```
 
@@ -521,7 +541,11 @@ dsget user "CN=John Doe,OU=IT,DC=leokadia,DC=net" -memberof
 
 ```
 gpresult /r /scope:computer
+```
+```
 gpresult /h report.html
+```
+```
 gpupdate /force
 ```
 
@@ -529,6 +553,8 @@ gpupdate /force
 
 ```
 powershell -c "Test-ComputerSecureChannel -Verbose"
+```
+```
 ntdsutil "activate instance ntds" "ifm" create full C:\IFM
 ```
 
@@ -538,7 +564,11 @@ ntdsutil "activate instance ntds" "ifm" create full C:\IFM
 
 ```powershell
 Get-ADDomain
+```
+```powershell
 Get-ADForest
+```
+```powershell
 Get-ADDomainController -Discover -NextClosestSite
 ```
 
@@ -546,7 +576,11 @@ Get-ADDomainController -Discover -NextClosestSite
 
 ```powershell
 Get-ADUser -Filter * -Properties memberOf | Select Name,SamAccountName
+```
+```powershell
 Get-ADGroup -Filter * | Select Name,GroupScope
+```
+```powershell
 Get-ADGroupMember "Domain Admins"
 ```
 
@@ -554,6 +588,8 @@ Get-ADGroupMember "Domain Admins"
 
 ```powershell
 Get-ADComputer -Filter * -Properties IPv4Address,OperatingSystem
+```
+```powershell
 Get-ADOrganizationalUnit -Filter * | Select Name,DistinguishedName
 ```
 
@@ -561,6 +597,8 @@ Get-ADOrganizationalUnit -Filter * | Select Name,DistinguishedName
 
 ```powershell
 Get-GPO -All
+```
+```powershell
 Get-GPResultantSetOfPolicy -ReportType Html -Path .\RSoP.html
 ```
 
@@ -568,6 +606,8 @@ Get-GPResultantSetOfPolicy -ReportType Html -Path .\RSoP.html
 
 ```powershell
 Get-ADReplicationPartnerMetadata -Target * -Scope Forest
+```
+```powershell
 Get-ADReplicationFailure -Scope Site
 ```
 
